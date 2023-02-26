@@ -1,0 +1,131 @@
+/* Polices d'écriture :
+
+font-family: 'Dosis', sans-serif; Autres ou sous-titres
+font-family: 'Lobster', cursive;  Titres
+font-family: 'Montserrat', sans-serif; Textes */
+
+/* Palette de couleurs :
+-Bleu foncé :       #0B162C     rgb(11, 22, 44)
+-Bleu atténué :     #1C2942     rgb(28, 41, 66)
+-Bleu gris :        #3B556D     rgb(59, 85, 109)
+-Bleu vert :        #5FC2BA     rgb(95, 194, 186)
+-Blanc :            #FFFFFF     rgb(255, 255, 255)*/
+
+/* -------------------------------------------------------------- */
+/* Image de fond */
+body{
+    background-image: url(Elements_graphique/fond_index.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #FFFFFF;  
+}
+
+/* -------------------------------------------------------------- */
+/* Gestion du logo */
+/* Création d'un bord pour le logo 
+Position absolute pour logo en haut à gauche de la page*/
+.border_logo{
+    background-color: #FFFFFF ;
+    border-radius: 43% 57% 24% 76% / 67% 30% 70% 33%;
+    position: absolute;
+    left: 10em;
+}
+
+/* Logo non affiché si largeur < 730px */
+@media screen and (max-width: 1000px) {
+    .border_logo{
+        display: none;
+    }
+}
+/* Ajustement taille du logo */
+.logo{
+    width: 15em;
+    margin: 3em;
+}
+/* -------------------------------------------------------------- */
+/* Taille du header pour pouvoir avoir de la place pour le hover des boutons du menu */
+header{
+    height: 15em;
+}
+
+/* flex sur le menu pour qu'il soit côté droit */
+.menu{
+    background-color: rgba(59, 85, 109, 0.9);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5em;
+    padding: 20px 50px;
+    border-radius: 10px; 
+}
+/* bouton du menu avec une autre couleur de fond */
+.cta{
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+    color: white;
+    text-decoration: none;
+    /* border-top: solid;
+    border-top-color: #5FC2BA;
+    border-bottom: solid;
+    border-bottom-color: #5FC2BA; */
+    }
+
+/* Soulignage du bouton quand survolé */
+.cta:hover{
+    text-decoration: underline;
+}
+
+/* Radius sur le 1er et dernier élément */
+.premier{
+    border-radius: 5px 0px 0px 5px;
+}
+
+.dernier{
+    border-radius: 0px 5px 5px 0px;
+}
+/* -------------------------------------------------------------- */
+/* main et intérieur */
+/* Filtre background en transparence */
+main{
+    background-color: rgba(59, 85, 109, 0.9);
+    border-radius: 10px;
+}
+
+/* H1 centré + marges + font */
+h1{
+    padding-top: 0.5em;
+    font-family: 'Lobster', cursive;
+    font-size: 7em;
+    text-align: center;
+}
+/* p centré + font */
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+}
+/* balise strong plus grasse + couleur */
+strong{
+    font-weight: 700;
+    color:#5FC2BA
+}
+/* padding bas pour le dernier p */
+.dernier_p{
+    padding-bottom: 3em;
+}
+/* -------------------------------------------------------------- */
+/* Footer */
+footer{
+    text-align: end;
+    border-radius: 10px;
+}
+i{
+    font-size: 2em;
+    color: #5FC2BA;
+    padding-right: 1em;
+}
